@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--suppress XmlHighlighting, XmlHighlighting -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="login_scene"
+       xmlns="http://javafx.com/javafx/21">
+    <root>
+        <GridPane alignment="CENTER" maxHeight="720.0" maxWidth="1080.0"
+                  minHeight="720.0" minWidth="1080.0"
+                  prefHeight="720.0" prefWidth="1080.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS"
+                                   minWidth="10.0"/>
+                <ColumnConstraints fillWidth="false" halignment="CENTER"
+                                   hgrow="ALWAYS" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS"
+                                   minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER"
+                      GridPane.hgrow="ALWAYS"
+                      GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                      GridPane.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Welcome to Klassroom"/>
+                        <HBox alignment="BASELINE_LEFT"
+                              fillHeight="false" VBox.vgrow="NEVER">
+                            <children>
+                                <Label text="Username:"/>
+                                <TextField fx:id="username_field_log"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="BASELINE_LEFT"
+                              fillHeight="false" VBox.vgrow="NEVER">
+                            <children>
+                                <Label text="Password: "
+                                       HBox.hgrow="ALWAYS"/>
+                                <PasswordField
+                                        fx:id="password_field_log"
+                                        onAction="#loginEvent"/>
+                                <Button fx:id="login_button"
+                                        mnemonicParsing="false"
+                                        onAction="#loginEvent"
+                                        text="Sign In"/>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label text="New user? "/>
+                                <Button fx:id="sign_up_button"
+                                        mnemonicParsing="false"
+                                        onAction="#showSignupScreen"
+                                        text="Sign Up"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </root>
+</Scene>

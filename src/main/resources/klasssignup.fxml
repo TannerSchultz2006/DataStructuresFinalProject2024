@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.text.Font?>
+<Scene xmlns:fx="http://javafx.com/fxml/1"
+       xmlns="http://javafx.com/javafx/21">
+    <VBox alignment="CENTER_LEFT" maxHeight="720.0" maxWidth="1080.0"
+          minHeight="720.0" minWidth="1080.0">
+        <children>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints halignment="CENTER"
+                                       hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"
+                                       prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                       prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints valignment="CENTER" vgrow="NEVER"/>
+                    <RowConstraints maxHeight="668.0" minHeight="10.0"
+                                    prefHeight="653.0"
+                                    vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <children>
+                    <VBox prefHeight="200.0" prefWidth="100.0"
+                          GridPane.rowIndex="1">
+                        <children>
+                            <ListView VBox.vgrow="ALWAYS"/>
+                        </children>
+                    </VBox>
+                    <Label text="Browse Active Classes">
+                        <font>
+                            <Font size="36.0"/>
+                        </font>
+                    </Label>
+                    <Label text="Want to Run your own Klass?"
+                           GridPane.columnIndex="2">
+                        <font>
+                            <Font size="36.0"/>
+                        </font>
+                    </Label>
+                    <VBox prefHeight="200.0" prefWidth="100.0"
+                          GridPane.columnIndex="2"
+                          GridPane.halignment="CENTER"
+                          GridPane.hgrow="ALWAYS" GridPane.rowIndex="1"
+                          GridPane.valignment="TOP"
+                          GridPane.vgrow="ALWAYS">
+                        <children>
+                            <HBox alignment="CENTER_LEFT"
+                                  VBox.vgrow="NEVER">
+                                <children>
+                                    <Label text="Klass Name: "
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font size="18.0"/>
+                                        </font>
+                                    </Label>
+                                    <TextField/>
+                                </children>
+                            </HBox>
+                            <Label text="Discription:"
+                                   VBox.vgrow="NEVER">
+                                <font>
+                                    <Font size="18.0"/>
+                                </font>
+                            </Label>
+                            <TextArea maxHeight="300.0"
+                                      prefHeight="400.0"
+                                      VBox.vgrow="ALWAYS">
+                                <padding>
+                                    <Insets right="5.0"/>
+                                </padding>
+                            </TextArea>
+                            <HBox alignment="CENTER" prefHeight="30.0"
+                                  prefWidth="200.0" VBox.vgrow="NEVER">
+                                <children>
+                                    <Button mnemonicParsing="false"
+                                            text="Create Klass"
+                                            HBox.hgrow="NEVER"/>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </GridPane>
+            <Button alignment="CENTER" mnemonicParsing="false"
+                    text="  Join!  " VBox.vgrow="SOMETIMES">
+                <padding>
+                    <Insets bottom="5.0" top="5.0"/>
+                </padding>
+            </Button>
+        </children>
+    </VBox>
+</Scene>

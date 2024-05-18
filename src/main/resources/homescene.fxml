@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--suppress XmlHighlighting, XmlHighlighting -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.text.Font?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="home_scene" xmlns="http://javafx.com/javafx/17.0.2-ea">
+    <VBox maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0">
+        <children>
+            <FlowPane alignment="CENTER" VBox.vgrow="NEVER">
+                <children>
+                    <Label fx:id="rotating_banner" alignment="CENTER" contentDisplay="CENTER" text="Holder Text">
+                        <font>
+                            <Font size="24.0"/>
+                        </font>
+                    </Label>
+                </children>
+            </FlowPane>
+            <GridPane alignment="CENTER" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <children>
+                    <Label alignment="CENTER" text="Active Klasses" GridPane.halignment="CENTER"
+                           GridPane.hgrow="ALWAYS">
+                        <font>
+                            <Font size="22.0"/>
+                        </font>
+                    </Label>
+                    <Label contentDisplay="CENTER" text="Todo List" GridPane.columnIndex="2"
+                           GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP"
+                           GridPane.vgrow="NEVER">
+                        <font>
+                            <Font size="22.0"/>
+                        </font>
+                    </Label>
+                    <VBox GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                        <children>
+                            <ListView fx:id="klass_listview" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <children>
+                            <ListView fx:id="todo_listview" focusTraversable="false" VBox.vgrow="ALWAYS"/>
+                        </children>
+                    </VBox>
+                    <ListView fx:id="assignments_listview" focusTraversable="false" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"
+                              GridPane.rowIndex="1" GridPane.vgrow="ALWAYS"/>
+                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.rowIndex="2">
+                        <children>
+                            <TextField fx:id="banner_field" onAction="#addBannerEvent" promptText="Add a banner"
+                                       HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="add_banner_text" mnemonicParsing="false" onAction="#addBannerEvent"
+                                    text="+"/>
+                            <Button fx:id="remove_banner_text" maxHeight="26.0" maxWidth="26.0" minHeight="26.0"
+                                    minWidth="26.0" mnemonicParsing="false" onAction="#removeBannerEvent"
+                                    prefHeight="26.0" prefWidth="26.0" text="-"/>
+                            <Button fx:id="save_button" alignment="CENTER_RIGHT" mnemonicParsing="false"
+                                    onAction="#saveState" text="Save" HBox.hgrow="NEVER"/>
+                        </children>
+                    </HBox>
+                    <SplitPane dividerPositions="0.57" focusTraversable="false" GridPane.columnIndex="1"
+                               GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                               GridPane.vgrow="NEVER">
+                        <items>
+                            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" focusTraversable="false"
+                                   prefHeight="32.0" prefWidth="766.0" text="Assignment Queue" textAlignment="CENTER">
+                                <font>
+                                    <Font size="22.0"/>
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_RIGHT">
+                                <children>
+                                    <Button mnemonicParsing="false" onAction="#dequeueEvent" text="Complete top"/>
+                                    <Button fx:id="add_assignment_button" alignment="BOTTOM_RIGHT"
+                                            contentDisplay="CENTER" mnemonicParsing="false"
+                                            onAction="#addAssignmentScreenEvent" text="Add Asignment"/>
+                                </children>
+                            </HBox>
+                        </items>
+                    </SplitPane>
+                    <HBox GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <children>
+                            <TextField fx:id="todo_textfield" onAction="#pushTodo" promptText="Add a new todo"
+                                       HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="push_todo" mnemonicParsing="false" onAction="#pushTodo" text="+"/>
+                            <Button fx:id="pop_todo" mnemonicParsing="false" onAction="#popTodo" text="-"/>
+                        </children>
+                    </HBox>
+                </children>
+            </GridPane>
+            <HBox>
+                <children>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Button mnemonicParsing="false" onAction="#signOutEvent" text="Sign Out"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+</Scene>

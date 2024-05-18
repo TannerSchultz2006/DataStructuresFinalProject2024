@@ -1,0 +1,40 @@
+{
+  "user_list": [
+    {
+      "Uhash": {
+        "khash": -1311753637
+      },
+      "username": "Kira1",
+      "password": "kk",
+      "Phash": {
+        "khash": -653379667
+      },
+      "todo_list": [],
+      "assignment_heap": {
+        "heap": [],
+        "size": 0
+      },
+      "linked_list": [
+        "Welcome Silly Goose"
+      ],
+      "min_heap": []
+    },
+    {
+      "Uhash": {
+        "khash": 879580732
+      },
+      "username": "Kira",
+      "password": "kk",
+      "Phash": {
+        "khash": -653379667
+      },
+      "todo_list": [],
+      "assignment_heap": {
+        "heap": [],
+        "size": 0
+      },
+      "linked_list": [],
+      "min_heap": []
+    }
+  ]
+}

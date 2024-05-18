@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<Scene xmlns:fx="http://javafx.com/fxml/1"
+       xmlns="http://javafx.com/javafx/21">
+    <GridPane maxHeight="720.0" maxWidth="1080.0" minHeight="720.0"
+              minWidth="1080.0" prefHeight="720.0"
+              prefWidth="1080.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+        <children>
+            <VBox alignment="CENTER" GridPane.columnIndex="1"
+                  GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                  GridPane.valignment="CENTER">
+                <children>
+                    <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                        <children>
+                            <Label text="Assignment Name:  "/>
+                            <TextField fx:id="name_textfield"/>
+                        </children>
+                        <padding>
+                            <Insets bottom="2.0" top="2.0"/>
+                        </padding>
+                    </HBox>
+                    <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                        <children>
+                            <Label text="Assignment Points:  "/>
+                            <TextField fx:id="points_textfield"/>
+                        </children>
+                        <padding>
+                            <Insets bottom="2.0" top="2.0"/>
+                        </padding>
+                    </HBox>
+                    <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                        <children>
+                            <Label text="Due Date:  "/>
+                            <DatePicker fx:id="duedate_datefield"/>
+                            <Button fx:id="add_assignment_button"
+                                    mnemonicParsing="false"
+                                    onAction="#createAssignmentEvent"
+                                    text="Submit">
+                                <HBox.margin>
+                                    <Insets left="5.0"/>
+                                </HBox.margin>
+                            </Button>
+                        </children>
+                        <padding>
+                            <Insets bottom="2.0" top="2.0"/>
+                        </padding>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </GridPane>
+</Scene>
