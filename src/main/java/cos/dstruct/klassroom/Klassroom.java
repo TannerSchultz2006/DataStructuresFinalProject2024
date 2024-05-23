@@ -18,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 
 public class Klassroom extends Application {
 
-
     public Scene signup_screen;
     public Scene login_screen;
     public Scene home_screen;
@@ -202,5 +201,4 @@ public class Klassroom extends Application {
         }
     }
     Gson gson = new GsonBuilder().addSerializationExclusionStrategy(exclusionAnnotation).create();
-
 }

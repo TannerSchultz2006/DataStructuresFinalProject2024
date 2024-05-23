@@ -98,7 +98,7 @@ public class HomeHandler {
     }
 
     public void dequeueEvent(ActionEvent event) {
-        active_user.min_heap.remove(active_user.min_heap.size() - 1);
+        active_user.min_heap.removeFirst();
         active_user.assignment_heap = new MinHeap<>(active_user.min_heap);
         updateAssignmentQueue();
     }
