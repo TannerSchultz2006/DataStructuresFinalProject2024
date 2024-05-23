@@ -65,7 +65,11 @@ public class HomeHandler {
 
     public void updateStackListview() {
         todo_listview.getItems().clear();
-        todo_listview.getItems().addAll(klassroom.getActiveUser().todo_list);
+        ArrayList<String> users_todolist = klassroom.getActiveUser().todo_list;
+        List<String> reversed_list = users_todolist.reversed();
+
+
+        todo_listview.getItems().addAll(reversed_list);
     }
 
     public void addAssignmentScreenEvent(ActionEvent event) {
@@ -77,7 +81,7 @@ public class HomeHandler {
     }
 
     public void popTodo(ActionEvent event) {
-        todo_listview.getItems().remove(klassroom.getActiveUser().todo_list.size() - 1);
+        todo_listview.getItems().removeFirst();
         klassroom.popTodo();
     }
 
